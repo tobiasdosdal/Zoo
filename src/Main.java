@@ -1,20 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main
 {
     public static void main(String[] args)
     {
-        Dyr hund = new Pattedyr("Fido", "Hund");
-        Dyr falk = new Fugl("Ørn", "Fugl");
-        Dyr haj = new Fisk("Gert K", "Haj");
+        List<Dyr> dyreliste = new ArrayList<Dyr>();
 
-        System.out.println(hund.givLyd());
-        System.out.println(falk.givLyd());
-        System.out.println(haj.givLyd());
+        dyreliste.add(new Pattedyr("Fido", "Hund"));
+        dyreliste.add(new Fugl("Ørn", "Fugl"));
+        dyreliste.add(new Fisk("Gert K", "Haj"));
 
-        if (falk instanceof KanFlyve) {
-            ((KanFlyve)falk).flyv();
-        }
-        if (haj instanceof KanSvoemme) {
-            ((KanSvoemme)haj).svoem();
+        for (Dyr dyr : dyreliste)
+        {
+            System.out.println(dyr.givLyd());
+
+            if (dyr instanceof KanFlyve)
+            {
+                ((KanFlyve) dyr).flyv();
+            }
+            if (dyr instanceof KanSvoemme)
+            {
+                ((KanSvoemme) dyr).svoem();
+            }
         }
     }
 }
