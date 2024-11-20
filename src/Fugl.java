@@ -1,8 +1,4 @@
-interface KanFlyve {
-    public void flyv();
-}
-
-public class Fugl extends Dyr implements KanFlyve
+public abstract class Fugl extends Dyr
 {
     public Fugl(String navn, String type)
     {
@@ -15,7 +11,6 @@ public class Fugl extends Dyr implements KanFlyve
         return "Pip Pip";
     }
 
-    @Override
     public void flyv()
     {
         System.out.println(navn + " flyver gennem luften");

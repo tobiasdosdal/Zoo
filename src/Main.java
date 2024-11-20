@@ -7,9 +7,9 @@ public class Main
     {
         List<Dyr> dyreliste = new ArrayList<Dyr>();
 
-        dyreliste.add(new Pattedyr("Fido", "Hund"));
-        dyreliste.add(new Fugl("Ørn", "Fugl"));
-        dyreliste.add(new Fisk("Gert K", "Haj"));
+        dyreliste.add(new Hund("Fido", "Hund"));
+        dyreliste.add(new Falk("Ørn", "Fugl"));
+        dyreliste.add(new Haj("Gert K", "Haj"));
 
         for (Dyr dyr : dyreliste)
         {
